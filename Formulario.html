@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de registro</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        <script>
+    var provincias_1=new Array("-","Arica","Camarones","Putre","General Lagos","...");
+    var provincias_2=new Array("-","Iquique","Camiña","Colchane","Huara","Pica","Pozo Almonte Alto Hospicio","...");
+    var provincias_3=new Array("-","Antofagasta","Mejillones","Sierra Gorda","Taltal","Calama","Ollagüe","San Pedro de Atacama","Tocopilla","María Elena","...");
+    var provincias_4=new Array("-","Copiapó","Caldera","Tierra Amarilla","Chañaral","Diego de Almagro","Vallenar","Alto del Carmen","Freirina","Huasco","...");
+    var provincias_5=new Array("-","La Serena","Coquimbo","Andacollo","La Higuera","Paiguano","Vicuña","Illapel","Canela","Los Vilos","Salamanca","Ovalle","Combarbalá","Monte Patria","Punitaqui","Río Hurtado","...");
+    var provincias_6=new Array("-","Valparaíso","Casablanca","Concón","Juan Fernández","Puchuncaví","Quilpué","Quintero","Villa Alemana","Viña del Mar","Isla  de Pascua","Los Andes","Calle Larga","Rinconada","San Esteban","La Ligua","Cabildo","Papudo","Petorca","Zapallar","Quillota","Calera","Hijuelas","La Cruz","Limache","Nogales","Olmué","San Antonio","Algarrobo","Cartagena","El Quisco","El Tabo","Santo Domingo","San Felipe","Catemu","Llaillay","Panquehue","Putaendo","Santa María","...");
+    var provincias_7=new Array("-","Santiago","Cerrillos","Cerro Navia","Conchalí","El Bosque","Estación Central","Huechuraba","Independencia","La Cisterna","La Florida","La Granja","La Pintana","La Reina","Las Condes","Lo Barnechea","Lo Espejo","Lo Prado","Macul","Maipú","Ñuñoa","Pedro Aguirre Cerda","Peñalolén","Providencia","Pudahuel","Quilicura","Quinta Normal","Recoleta","Renca","San Joaquín","San Miguel","San Ramón","Vitacura","Puente Alto","Pirque","San José de Maipo","Colina","Lampa","Tiltil","San Bernardo","Buin","Calera de Tango","Paine","Melipilla","Alhué","Curacaví","María Pinto","San Pedro","Talagante","El Monte","Isla de Maipo","Padre Hurtado","Peñaflor" ,"...");
+    var provincias_8=new Array("-","Rancagua","Codegua","Coinco","Coltauco","Doñihue","Graneros","Las Cabras","Machalí","Malloa","Mostazal","Olivar","Peumo","Pichidegua","Quinta de Tilcoco","Rengo","Requínoa","San Vicente","Pichilemu","La Estrella","Litueche","Marchihue","Navidad","Paredones","San Fernando","Chépica","Chimbarongo","Lolol","Nancagua","Palmilla","Peralillo","Placilla","Pumanque","Santa Cruz","...");
+    var provincias_9=new Array("-","Talca","Constitución","Curepto","Empedrado","Maule","Pelarco","Pencahue","Río Claro","San Clemente","San Rafael","Cauquenes","Chanco","Pelluhue","Curicó","Hualañé","Licantén","Molina","Rauco","Romeral","Sagrada Familia","Teno","Vichuquén","Linares","Colbún","Longaví","Parral","Retiro","San Javier","Villa Alegre","Yerbas Buenas" ,"...");
+    var provincias_10=new Array("-","Chillán","Bulnes","Cobquecura","Coelemu","Coihueco","Chillán Viejo","El Carmen","Ninhue","Ñiquén","Pemuco","Pinto","Portezuelo","Quillón","Quirihue","Ránquil","San Carlos","San Fabián","San Ignacio","San Nicolás","Treguaco","Yungay","...");
+    var provincias_11=new Array("-","Concepción","Coronel","Chiguayante","Florida","Hualqui","Lota","Penco","San Pedro de la Paz","Santa Juana","Talcahuano","Tomé","Hualpén","Lebu","Arauco","Cañete","Contulmo","Curanilahue","Los Álamos","Tirúa","Los Ángeles","Antuco","Cabrero","Laja","Mulchén","Nacimiento","Negrete","Quilaco","Quilleco","San Rosendo","Santa Bárbara","Tucape","Yumbel","Alto Biobío","...");
+    var provincias_12=new Array("-","Temuco","Carahue","Cunco","Curarrehue","Freire","Galvarino","Gorbea","Lautaro","Loncoche","Melipeuco","Nueva Imperial","Padre Las Casas","Perquenco","Pitrufquén","Pucón","Saavedra","Teodoro Schmidt","Toltén","Vilcún","Villarrica","Cholchol","Angol","Collipulli","Curacautín","Ercilla","Lonquimay","Los Sauces","Lumaco","Purén","Renaico","Traiguén","Victoria","...");
+    var provincias_13=new Array("-","Valdivia","Corral","Futrono","La Unión","Lago Ranco","Lanco","Los Lagos","Máfil","Mariquina","Paillaco","Panguipulli","Río Bueno","...");
+    var provincias_14=new Array("-","Puerto Montt","Calbuco","Cochamó","Fresia","Frutillar","Los Muermos","Llanquihue","Maullín","Puerto Varas","Castro","Ancud","Chonchi","Curaco de Vélez","Dalcahue","Puqueldón","Queilén","Quellón","Quemchi","Quinchao","Osorno","Puerto Octay","Purranque","Puyehue","Río Negro","San Juan de la Costa","San Pablo","Chaitén","Futaleufú","Hualaihué","Palena" ,"...");
+    var provincias_15=new Array("-","Coihaique","Lago Verde","Aisén","Cisnes","Guaitecas","Cochrane","O'Higgins","Tortel","Chile Chico","Río Ibáñez","...");
+    var provincias_16=new Array("-","Punta Arenas","Laguna Blanca","Río Verde","San Gregorio","Cabo de Hornos","Antártica","Porvenir","Primavera","Timaukel","Natales","Torres del Paine" ,"...");
+
+  
+    var todasProvincias = [
+      [],
+      provincias_1,
+      provincias_2,
+      provincias_3,
+      provincias_4,
+      provincias_5,
+      provincias_6,
+      provincias_7,
+      provincias_8,
+      provincias_9,
+      provincias_10,
+      provincias_11,
+      provincias_12,
+      provincias_13,
+      provincias_14,
+      provincias_15,
+      provincias_16,
+    ];
+  
+    function cambia_provincia(){ 
+         //tomo el valor del select del pais elegido 
+         var reg //pais 
+         reg = document.f1.reg[document.f1.reg.selectedIndex].value 
+         //miro a ver si el pais está definido 
+         if (reg != 0) { 
+            //si estaba definido, entonces coloco las opciones de la provincia correspondiente. 
+            //selecciono el array de provincia adecuado 
+            mis_provincias=todasProvincias[reg]
+            //calculo el numero de provincias 
+            num_provincias = mis_provincias.length 
+            //marco el número de provincias en el select 
+            document.f1.provincia.length = num_provincias 
+            //para cada provincia del array, la introduzco en el select 
+            for(i=0;i<num_provincias;i++){ 
+               document.f1.provincia.options[i].value=mis_provincias[i] 
+               document.f1.provincia.options[i].text=mis_provincias[i] 
+            }	
+         }else{ 
+            //si no había provincia seleccionada, elimino las provincias del select 
+            document.f1.provincia.length = 1 
+            //coloco un guión en la única opción que he dejado 
+            document.f1.provincia.options[0].value = "-" 
+            document.f1.provincia.options[0].text = "-" 
+         } 
+         //marco como seleccionada la opción primera de provincia 
+         document.f1.provincia.options[0].selected = true 
+  }
+  
+    </script>
+  </head>
+  <body>
+  <div class="container-fluid">
+	  <nav class="navbar navbar-default">
+	    <div class="container-fluid">
+	      <!-- Brand and toggle get grouped for better mobile display -->
+	      <div class="navbar-header">
+	        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+	        <a class="navbar-brand active" href="index.html"><img src="images/logo_turquesa.jpeg" width="431" height="65" alt=""/></a></div>
+	      <!-- Collect the nav links, forms, and other content for toggling -->
+	      <div class="collapse navbar-collapse" id="defaultNavbar1">
+<ul class="nav navbar-nav">
+          <li><a href="adopta.html">Adopta un amigo<span class="sr-only">(current)</span></a></li>
+	          <li><a href="Somos.html">Quienes somos</a></li>     
+              <li><a href="Formulario.html">Formulario de registro</a></li>
+	        </ul>
+	        <ul class="nav navbar-nav navbar-right">
+          <li></li>
+	          <li class="dropdown">
+<ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+	              <li><a href="#">Another action</a></li>
+	              <li><a href="#">Something else here</a></li>
+	              <li class="divider"></li>
+	              <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+	      <!-- /.navbar-collapse -->
+        </div>
+	    <!-- /.container-fluid -->
+      </nav>
+    </div>
+  <div class="container">
+   <body>
+  <header>
+    
+    <h1>Formulario de registro</h1>
+
+    </header>
+  <br>
+<p >
+  <img src="images/boos.jpg" alt="" width="448" height="337" class="table-bordered"/></p>
+  <br>
+  <div class="padre">
+    <form name="f1" id="basic-form" action="" method="post"> <!--agregue nombre f1-->
+       <p>
+        <label for="rut">RUT <span>(Maximo 8 caracteres.)</span></label>
+        &nbsp; &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  <input id="rut" name="rut">
+      </p>
+      <p>
+        <label for="dgv">DV <span>(Maximo 1 caracter.)</span></label>
+        &nbsp; &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input name="dgv" id="dgv" size="1">
+      </p>
+
+        <p>
+          <label for="name">NOMBRE <span>(Maximo 50 caracteres.)</span></label>
+          &nbsp &nbsp &nbsp <input id="name" name="name" minlength="3" type="text" required>
+        </p>
+        <p>
+          <label for="fon">TELEFONO CONTACTO <span>(CEL) +56..  </span></label>
+          &nbsp &nbsp <input id="fon" name="fon" minlength="9" type="text" required>
+        </p>
+        <p>
+          <label for="fec">FECHA DE NACIMIENTO <span>(Anterior a año 2001.)  </span></label>
+          <input id="fechita" type="date" min="1930-12-31" max="2001-12-31">
+      </p>
+        <!--<p>
+          <label for="dire">DIRECCION <span>(Maximo 100 caracteres.)</span></label>
+          <input id="dire" name="dire" minlength="3" type="text" required>
+        </p>-->
+        <p>
+        
+          <!--<label for="Reg">REGION <span>(required)</span></label> Parte formulario anterior.
+          <select name="reg">
+          
+            <option value="1">Región de Arica y Parinacota.
+            <option value="2">Región de Tarapacá.
+            <option value="3">Región de Antofagasta.
+            <option value="4">Región de Atacama.
+            <option value="5">Región de Coquimbo.
+            <option value="6">Región de Valparaíso.
+            <option value="7">Región Metropolitana de Santiago.
+            <option value="8">Región del Libertador General Bernardo O’Higgins.
+            <option value="9">Región del Maule.
+            <option value="10">Región del Ñuble.
+            <option value="11">Región del Biobío.
+            <option value="12">Región de La Araucanía.
+            <option value="13">Región de Los Ríos.
+            <option value="14">Región de Los Lagos.
+            <option value="15">Región de Aysén del General Carlos Ibáñez del Campo.
+            <option value="16">Región de Magallanes y la Antártica Chilena.
+            
+          </select>
+        </p>-->
+        <p>
+        <select name=reg onchange="cambia_provincia()"> 
+            <option value="0" selected>Seleccione... 
+            <option value="1">Región de Arica y Parinacota. 
+            <option value="2">Región de Tarapacá.
+            <option value="3">Región de Antofagasta.
+            <option value="4">Región de Atacama.
+            <option value="5">Región de Coquimbo.
+            <option value="6">Región de Valparaíso.
+            <option value="7">Región Metropolitana de Santiago.
+            <option value="8">Región del Libertador General Bernardo O’Higgins.
+            <option value="9">Región del Maule.
+            <option value="10">Región del Ñuble.
+            <option value="11">Región del Biobío.
+            <option value="12">Región de La Araucanía.
+            <option value="13">Región de Los Ríos.
+            <option value="14">Región de Los Lagos.
+            <option value="15">Región de Aysén del General Carlos Ibáñez del Campo.
+            <option value="16">Región de Magallanes y la Antártica Chilena.
+    </select>
+    
+    <select name=provincia> 
+    <option value="-">- 
+    </select> 
+         <!--Esto tenia antes de darme la paja...
+          <label for="ciu">CIUDAD <span>(required)</span></label>
+          <select name="ciu">
+          
+            <option value="a" selected>Gran Santiago 
+            <option value="b">Gran Valparaíso 
+            <option value="c">Gran Concepción
+            <option value="d">Gran La Serena
+            <option value="e">Antofagasta
+            <option value="f">Gran Temuco
+            <option value="g">Gran Iquique
+            <option value="h">Gran Rancagua
+            <option value="i">Puerto Montt
+            <option value="j">Talca
+            <option value="k">Arica 
+            <option value="l">Gran Chillán
+            <option value="m">Los Ángeles
+            <option value="n">Calama
+            <option value="o">Colina
+            <option value="p">Gran Quillota
+            <option value="q">Valdivia
+            <option value="r">Osorno
+            <option value="s">Copiapó
+            <option value="t">Curicó
+            <option value="u">Melipilla
+            <option value="v">Punta Arenas
+            <option value="w">Gran San Antonio
+            <option value="x">Lampa
+            <option value="y">Ovalle
+            <option value="z">Peñaflor
+            <option value="a1">Linares
+            <option value="a2">Paine
+            <option value="a3">Los Andes-Calle Larga
+            <option value="a4">San Felipe
+            <option value="a5">Talagante
+            <option value="a6">San Fernando
+            <option value="a7">Buin
+            <option value="a8">Rengo
+            <option value="a9">Coyhaique 
+            <option value="a10">Villarrica
+            <option value="a11">San Carlos
+            <option value="a12">Angol
+            <option value="a13">San Vicente
+            <option value="a14">Molina
+            <option value="a15">Limache
+            <option value="a16">Constitución
+            <option value="a17">San Javier
+            
+            </select>-->
+        </p>
+        
+        <p>
+        <label for="tip">TIPO DE VIVIENDA <span>(required)</span></label>
+          <select name="tip">
+          
+            <option value="pg">Casa con patio grande.
+            <option value="pp">Casa con patio pequeño.
+            <option value="cs">Casa sin patio.
+            <option value="dp">Departamento.
+            
+          </select>
+        </p>
+      <p>
+          <label for="email">E-MAIL <span>(required)</span></label>
+          &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input id="email" type="email" name="email" required>
+        </p>
+        
+        
+          
+
+          <p>
+          <input class="submit" type="submit" value="SUBMIT" >
+        </p>
+    </form>
+
+
+ 
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/formukarioChico.js"></script>
+<script src="js/all-letter.js"></script>
+<script>
+      let cajaFecha = document.getElementById("fechita")
+      cajaFecha.addEventListener("change", () => {
+           let fecha = document.getElementById("fechita")
+           let transformada = fecha.value.split("-")
+           console.log(transformada[0])
+          
+           if(transformada[0]>= "2021") {
+             fecha.value = ""
+           }
+      })
+    </script>
+  </body>
+  <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Comuniquese con nosotros:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Fundacion Gatunos
+          </h6>
+          <p>
+            Ayudanos, a entregarles el amor y cariño que se merecen.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            LLAMANOS
+          </h6>
+          <p>Comunicate con nosotros y adopta, no te arrepentiras.
+           <!-- <a href="#!" class="text-reset">Inicio</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Quienes somos</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Animales en adopcion</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Formulario de registro</a>-->
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Atencion!!
+            
+          </h6>
+          <p>Si deseas adoptar, visita nuestra pagina en la cual indicaremos nuevas fechas de jornadas de adopcion.
+           <!-- <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>-->
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contacto
+          </h6>
+          <p><i class="fas fa-home me-3"></i> Comandante Soza, 9181,  SANTIAGO</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            infogatunos@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 56 985797462</p>
+          <p><i class="fas fa-print me-3"></i> + 56 984218225</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="gatunos.html">GATUNOS</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</html>
+</html>
